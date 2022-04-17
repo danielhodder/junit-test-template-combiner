@@ -29,7 +29,7 @@ dependencies {
     testAnnotationProcessor("org.projectlombok:lombok:1.18.22")
 
     // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:${System.getenv().getOrDefault("JUNIT_VERSION", "5.4.0")}")
     testImplementation("org.junit-pioneer:junit-pioneer:1.7.0")
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
